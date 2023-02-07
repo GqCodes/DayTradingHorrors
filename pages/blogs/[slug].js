@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
+import Skelton from '../../Components/Skelton';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -20,7 +21,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -37,6 +38,13 @@ export async function getStaticProps({ params }) {
 }
 
 const Blog = ({ blog }) => {
+  if (!blog)
+    return (
+      <div>
+        <Skelton />
+      </div>
+    );
+
   const { featuredImage, title, body } = blog.fields;
   console.log(blog);
 
