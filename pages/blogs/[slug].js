@@ -1,7 +1,8 @@
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
-import Skelton from '../../Components/Skelton';
+import Skeleton from '../../Components/Skeleton';
+import style from '../../styles/Slug.module.scss';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -49,7 +50,7 @@ const Blog = ({ blog }) => {
   if (!blog)
     return (
       <div>
-        <Skelton />
+        <Skeleton />
       </div>
     );
 
@@ -58,34 +59,14 @@ const Blog = ({ blog }) => {
 
   return (
     <div>
-      <div className='banner'>
+      <div className={style.banner}>
         <Image src={`https:${featuredImage.fields.file.url}`} width={1200} height={600} alt='feature' />
         <h2>{title}</h2>
       </div>
 
-      <div className='body'>
+      <div className={style.body}>
         <div>{documentToReactComponents(body)}</div>
       </div>
-
-      <style jsx>
-        {`
-          h2,
-          h3 {
-            text-transform: uppercase;
-          }
-          .banner h2 {
-            margin: 0;
-            background: #fff;
-            display: inline-block;
-            padding: 20px;
-            position: relative;
-            top: -60px;
-            left: -10px;
-            transform: rotateZ(-1deg);
-            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-          }
-        `}
-      </style>
     </div>
   );
 };

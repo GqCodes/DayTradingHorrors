@@ -1,5 +1,6 @@
 import { createClient } from 'contentful';
 import BlogCard from '../Components/BlogCard';
+import styles from '../styles/Index.module.scss';
 
 export async function getStaticProps() {
   const client = createClient({
@@ -18,20 +19,10 @@ export async function getStaticProps() {
 
 export default function Blogs({ blogs }) {
   return (
-    <div className='blog-list'>
+    <div className={styles.blogList}>
       {blogs.map((blog) => (
         <BlogCard key={blog.sys.id} blog={blog} />
       ))}
-
-      <style jsx>
-        {`
-          .blog-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 20px 60px;
-          }
-        `}
-      </style>
     </div>
   );
 }
