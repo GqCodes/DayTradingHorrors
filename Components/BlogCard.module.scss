@@ -1,6 +1,6 @@
 .card {
   transform: rotateZ(-1deg);
-  margin: 3rem 1rem;
+  margin: 3rem 2rem;
   img {
     width: 100%;
     height: auto;
@@ -21,6 +21,9 @@
   h4 {
     margin: 4px 0;
     text-transform: uppercase;
+    @media screen and (max-width: 550px) {
+      font-size: 1.2rem;
+    }
   }
 }
 

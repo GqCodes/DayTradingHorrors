@@ -59,13 +59,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 550px) {
+      flex-direction: column;
+    }
   }
   .title {
     font-family: 'Creepster', cursive, sans-serif;
     font-size: 2rem;
+    @media screen and (max-width: 550px) {
+      margin-bottom: 0.5rem;
+    }
   }
   p {
     font-size: 1rem;
+    @media screen and (max-width: 550px) {
+      margin-bottom: 0.5rem;
+    }
   }
   .socials {
     font-size: 2rem;
