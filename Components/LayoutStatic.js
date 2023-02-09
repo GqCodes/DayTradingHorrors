@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import style from './Layout.module.scss';
+import style from './LayoutStatic.module.scss';
 import { RiPinterestLine } from 'react-icons/ri';
 import { RiTwitterLine } from 'react-icons/ri';
 import { RiInstagramLine } from 'react-icons/ri';
 
-export default function Layout({ children }) {
+export default function LayoutStatic({ children }) {
   return (
-    <div className={style.layout}>
+    <div className={style.layoutStatic}>
       <header className={style.header}>
         <Link href='/'>
           <h1>

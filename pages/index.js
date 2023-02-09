@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import Head from 'next/head';
 import BlogCard from '../Components/BlogCard';
+import Layout from '../Components/Layout';
 import styles from '../styles/Index.module.scss';
 
 export async function getStaticProps() {
@@ -20,7 +21,7 @@ export async function getStaticProps() {
 
 export default function Blogs({ blogs }) {
   return (
-    <>
+    <Layout>
       <Head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
@@ -48,6 +49,6 @@ export default function Blogs({ blogs }) {
           <BlogCard key={blog.sys.id} blog={blog} />
         ))}
       </div>
-    </>
+    </Layout>
   );
 }

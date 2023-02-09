@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Skeleton from '../../Components/Skeleton';
 import style from '../../styles/Slug.module.scss';
 import Head from 'next/head';
+import LayoutStatic from '../../Components/LayoutStatic';
 
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
@@ -58,7 +59,7 @@ const Blog = ({ blog }) => {
   const { featuredImage, title, body } = blog.fields;
 
   return (
-    <div>
+    <LayoutStatic>
       <Head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
@@ -90,7 +91,7 @@ const Blog = ({ blog }) => {
       <div className={style.body}>
         <div>{documentToReactComponents(body)}</div>
       </div>
-    </div>
+    </LayoutStatic>
   );
 };
 
