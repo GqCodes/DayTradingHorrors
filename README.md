@@ -2,9 +2,9 @@
 A blog website to showcase the other side of day trading, the side most people don't talk about.
 
 **Link to project:** http://www.daytradinghorrors.com
-![screencapture-daytradinghorrors-2023-02-09-15_40_55](https://user-images.githubusercontent.com/106452102/217934310-27aaabe9-84b8-47b2-be68-f3c613a9739d.png)
+![screencapture-daytradinghorrors-2023-02-09-15_40_55](https://user-images.githubusercontent.com/106452102/217962291-91aa71f4-0ca2-4e05-b23f-9fea0f8e139a.png)
 
-## How It's Made:
+## How It's Made:!
 
 **Tech used:** Next JS & SASS on the frontend & Contentful as a headless CMS on the backend.
 
