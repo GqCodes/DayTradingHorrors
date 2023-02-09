@@ -18,14 +18,13 @@ Needed a way to maximize the user experience as well as make it easy for the cli
 - Rich text react renderer came in handy to access and output the rich text component in contentful
 - Incremental Static Generation was a great choice for this project so that once content is added, updated, &/or deleted the page will rerender automatically to reflect those changes.
 
-## Future Enhancements
+## Future Enhancements:
 We'll look to add a search feature as well as pagination as the content grows to deliver a better user experience.
 Also looking to improve the overall site functionality for better SEO and a better lighthouse score.
 Add Google Analytics to monitor relevant data and user experience
 
-## Optimizations
+## Optimizations:
 Conducted keyword research to include in the Meta Head tags to help in ranking for the specific target audience.
 
 ## Lessons Learned:
-It was my first time using the rich text react renderer and it helped out in an enormous way. It made it so easy to display the data, and all it render are just basic semantic HTML element in the brower which is nice for styling and accessibility 
-
+Rich text react renderer helped out in an enormous way. It made it so easy to display the data, and all it renders is semantic HTML elements in the brower which is nice for styling and accessibility
