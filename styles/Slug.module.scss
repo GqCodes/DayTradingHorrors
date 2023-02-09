@@ -1,16 +1,50 @@
-.banner h2 {
-  margin: 0;
-  background: #fff;
-  display: inline-block;
-  padding: 20px;
-  position: relative;
-  top: -60px;
-  left: -10px;
-  transform: rotateZ(-1deg);
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
+.banner {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    margin: 0;
+    background: #fff;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    top: -60px;
+    left: -10px;
+    transform: rotateZ(-1deg);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 0.8rem;
+  }
 }
 
 .body {
   color: #fff;
+
+  p {
+    line-height: 1.2;
+    margin-top: 1.3rem;
+  }
+
+  blockquote {
+    padding: 0 2rem;
+
+    p i {
+      &::before {
+        content: '"';
+      }
+
+      &::after {
+        content: '"';
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 1.2rem;
+  }
 }
